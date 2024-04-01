@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  max-height: max-content;
+  
 }
 
 .App-logo {
@@ -22,6 +24,37 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+/* Header component CSS */
+
+
+
+
+/* component styling for all pages */
+.mainContainer
+{
+  background-color: #8AA06B;
+  background-image: url('./Images/BackgroundIMG.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-height: max-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.inputButtonWhite
+{
+  background-color:#ffffff;
+  height:60px;
+  width: 250px;
+  border-radius:65px;
+  margin-top: 15px;
+  border:2px solid #707070;
 }
 
 .App-link {
