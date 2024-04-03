@@ -1,9 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import {useState, useEffect} from 'react'
 
 const Home = (props) => {
     const { loggedIn, email } = props
     const navigate = useNavigate()
+    const [buttonClicked, setButtonClicked] = useState(false)
 
     const onButtonClickedLogin = () => {
         navigate('./login')
@@ -11,6 +13,10 @@ const Home = (props) => {
 
     const onButtonClickSignin = () => {
         //
+    }
+
+    const handleButtonClick = () =>{
+        setButtonClicked(true)
     }
 
     return (
@@ -21,10 +27,20 @@ const Home = (props) => {
                 </div>
                 <div>This is the home page.</div>
                 <div className={'buttonContainer'}>
-                    <input className={'inputButtonWhite'} type="button" onClick={onButtonClickedLogin} value={'Log in'}/>
+                    <input className={buttonClicked ? 'inputButtonWhiteHover' : 'inputButtonWhite'}  type="button" 
+                    onClick={() => {
+                        onButtonClickedLogin();
+                        handleButtonClick();
+                    }} 
+                    value={'Log in'}
+                    />
                 </div>
                 <div className={'buttonContainer'}>
-                    <input className={'inputButtonWhite'} type="button" onClick={onButtonClickSignin} value={'Sign up'}/>
+                    <input  className={buttonClicked ? 'inputButtonWhite clicked' : 'inputButtonWhite'} 
+                        type="button" 
+                        onClick={onButtonClickSignin} 
+                        value={'Sign up'}
+                    />
                 </div>
             </div>
         </div>

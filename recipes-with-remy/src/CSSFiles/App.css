@@ -66,9 +66,9 @@
   border:2px solid #707070;
 }
 
-.inputButtonWhiteClicked
+.inputButtonWhiteHover
 {
-  background-color:#ffffff;
+  background-color:#f0f0f0;
   height:60px;
   width: 250px;
   border-radius:65px;
