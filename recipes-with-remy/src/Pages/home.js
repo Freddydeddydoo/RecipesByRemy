@@ -12,7 +12,7 @@ const Home = (props) => {
     }
 
     const onButtonClickSignin = () => {
-        //
+        navigate('./signup')
     }
 
     const handleButtonClick = () =>{
@@ -36,7 +36,7 @@ const Home = (props) => {
                     />
                 </div>
                 <div className={'buttonContainer'}>
-                    <input  className={buttonClicked ? 'inputButtonWhite clicked' : 'inputButtonWhite'} 
+                    <input  className={buttonClicked ? 'inputButtonWhiteHover' : 'inputButtonWhite'} 
                         type="button" 
                         onClick={onButtonClickSignin} 
                         value={'Sign up'}

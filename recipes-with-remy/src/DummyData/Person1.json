@@ -4,7 +4,7 @@
     "D.O.B": "17-07-2001",
     "FirstName":"Samuel",
     "LastName":"Ulmtiti",
-    "savedRecipes": ["1R", "2R"],
+    "savedRecipes": ["1R"],
     "userID": "1U",
     "FoodData":[{
         "Name":"rice",
@@ -50,8 +50,8 @@
         "Name":"Chicken",
         "weight":2,
         "expiry":"12-04-2024"
-
     }
 ]
+
 
 }
