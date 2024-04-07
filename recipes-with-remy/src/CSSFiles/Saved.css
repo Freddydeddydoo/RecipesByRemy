@@ -1,0 +1,133 @@
+
+
+
+
+.fullPage{
+    width: 100vw;
+    height: 100vh;
+    border: 10px solid #333; /* Add a solid border */
+    padding: 5px; /* Add padding to create space inside the border */
+
+}
+
+
+.stickyHeader   
+    {
+        border: 10px solid #a81d1d;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        background-color: #272323;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+    
+    }
+.paramBox
+    {
+        display: flex;
+        width: 100%;
+        top: 140px;
+        background-color: #1a8d67;
+        position: relative;
+        flex-direction: column;
+
+    }
+
+.topTitle{
+    flex: 1;
+    width: 100%;
+}
+
+.SearchBar{
+    
+    justify-content: left;
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 3px solid #272323;
+    width: 10%;
+    margin-right: 30%;
+    margin-left: 5%;
+
+}
+
+.sortButton{
+    
+    justify-content: right;
+    background-color: whitesmoke;
+    margin-left: 40%;
+    margin-right: 5%;
+    width: 10%;
+
+    border: 3px solid #272323;
+}
+
+.filters{
+    display: flex;
+}
+
+.results{
+    margin-top: 10%;
+    padding: 5px;
+    border: 3px solid black;
+}
+
+.resultCell{
+    padding: 5px;
+    border: 3px solid green;
+    display: flex;
+}
+.resultImage{
+    padding: 5px;
+
+    margin-left: 10%;
+    height: 200px;
+    width: 450px;
+    background-color: yellow;
+}
+
+.resultsKeyFax{
+
+    padding: 5px;
+    background-color: white;
+
+    margin-left: 10%;
+    height: 100px;
+    width: 600px;
+
+}
+
+.resultsButtons{
+    margin-left: 20%;
+    padding: 5px;
+    width: 300px;
+    display: flex;
+}
+
+.resultsB_view{
+    padding: 5px;
+    margin-right: 10%;
+    height: 45px;
+    width: 45px;
+    background-color: green;
+}
+
+.resultsB_edit{
+    margin-right: 10%;
+    padding: 5px;
+    height: 45px;
+    width: 45px;
+    background-color: brown;
+}
+
+.resultsB_delete{
+    margin-right: 10%;
+    padding: 5px;
+    height: 45px;
+    width: 45px;
+    background-color: red;
+
+}
+
