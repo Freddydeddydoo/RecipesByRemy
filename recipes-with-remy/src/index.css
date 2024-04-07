@@ -4,7 +4,16 @@ body {
   font-family:'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #8AA06B;
+  background-image: url('./Images/BackgroundIMG.png'); 
+  background-size: 275%;
+  background-repeat: repeat;
+  background-position:  center;
+  max-height: max-content;
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
