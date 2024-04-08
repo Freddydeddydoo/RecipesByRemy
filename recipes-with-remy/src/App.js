@@ -9,6 +9,8 @@ import signup from './Pages/signup'
 import Saved from './Pages/saved'
 import Search from './Pages/search'
 import {useState, useEffect} from 'react'
+import Test from './Pages/test'
+import Test2 from './Pages/test2'
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/signup" element={<signup/>} />
           <Route path="/saved" element={<Saved/>} />
           <Route path="/search" element={<Search/>} />
+          <Route path="/test" element={<Test/>} />
+          <Route path="/test2" element={<Test2/>} />
         </Routes>
       </BrowserRouter>
     </div>
