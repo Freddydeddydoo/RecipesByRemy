@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {useState, useEffect} from 'react'
+import './../CSSFiles/HomePage.css'
 
 const Home = (props) => {
     const { loggedIn, email } = props
@@ -23,7 +24,7 @@ const Home = (props) => {
         <div className="mainContainer">
             <div className={'HomeSignLog'}>
                 <div className={'titleContainer'}>
-                    <div>Welcome!</div>
+                    <div className={'homeTitle'}>Recipes By Remy</div>
                 </div>
                 <div>This is the home page.</div>
                 <div className={'buttonContainer'}>

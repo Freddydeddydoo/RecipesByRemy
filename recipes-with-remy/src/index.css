@@ -4,6 +4,11 @@ body {
   font-family:'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #8AA06B !important;
+  background-image: url('./Images/BackgroundIMG.png'); 
+  background-size: 1270px;
+  background-repeat: repeat;
+  background-position: center;
 }
 
 code {

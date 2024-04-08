@@ -1,7 +1,6 @@
-{
+[{
     "Email": "SamuelUlmtiti@gmail.com",
     "password":"1234",
-    "D.O.B": "17-07-2001",
     "FirstName":"Samuel",
     "LastName":"Ulmtiti",
     "savedRecipes": ["1R"],
@@ -55,3 +54,4 @@
 
 
 }
+]

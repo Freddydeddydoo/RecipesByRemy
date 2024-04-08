@@ -43,13 +43,6 @@
 /* component styling for all pages */
 .mainContainer
 {
-  background-color: #8AA06B;
-  background-image: url('./../Images/BackgroundIMG.png'); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  max-height: max-content;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -66,7 +59,7 @@
   border:2px solid #707070;
 }
 
-.inputButtonWhiteHover
+.inputButtonWhiteClicked
 {
   background-color:#f0f0f0;
   height:60px;

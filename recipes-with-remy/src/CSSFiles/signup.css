@@ -1,0 +1,60 @@
+/* signup page stuffs */
+
+
+
+.FullPageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Use full viewport height */
+}
+
+
+.SignInBox {
+    display: flex;
+    flex-direction: column;
+    background-color: #7c9060;
+    height: 60vh;
+    width: 55vh;
+    /* Add some padding for aesthetic purposes */
+    padding: 2%;
+    /* Center the box content */
+    text-align: left;
+    font-size: smaller;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items vertically */
+    margin-bottom: 5px; /* Add margin for spacing between fields */
+    color:  black;
+}
+
+.SignInInputs{
+    color: #8AA06B;
+    border: 1px solid black;
+    width: 100%;
+    height: 150%;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.signInTxt{
+    text-align: center;
+}
+
+.signinButton{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.CustomGreen{
+    background-color: #FFF59D;
+    border-color: black;
+    color: black;
+    width: 100%;
+}
+
+

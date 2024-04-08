@@ -2,7 +2,7 @@ import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 
 const Login = (props) => {
-    const { loggedIn, email } = props
+    const { loggedIn, email } = props //to be decided tbh
     const navigate = useNavigate()
 
     return (
