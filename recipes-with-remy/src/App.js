@@ -7,6 +7,7 @@ import signup from './Pages/signup'
 import Profile from './Pages/profile'
 import {useState, useEffect} from 'react'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)  

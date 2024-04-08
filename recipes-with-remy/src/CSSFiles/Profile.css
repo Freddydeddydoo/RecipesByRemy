@@ -9,9 +9,21 @@
     width: 80vw; /* Adjust width as needed */
     height: 100px; /* Adjust height as needed */
     padding: 10px; /* Add padding to create space between content and border */
-    background-color: rgb(161, 230, 161); /* Set background color to light green */
+    background-color: rgb(210, 210, 210); /* Set background color to light green */
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.unit_text {
+  margin: -10px 20px 0; /* Adjust the margin-top value to move the text up */
+  position: relative;
+  top: -5px; /* Adjust the value to move the text up or down */
+  font-size: 22px;
+}
+
+.text{
+  position: relative;
+  left: 20px;
 }
