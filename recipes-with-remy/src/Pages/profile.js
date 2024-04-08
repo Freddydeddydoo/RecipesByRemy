@@ -4,29 +4,30 @@ import { useState } from 'react'; // Removed duplicate import of useEffect
 
 import './../CSSFiles/Profile.css';
 import Switch from "react-switch";
+import { Button } from '@mui/base/Button';
+
 
 const Profile = (props) => {
     const { loggedIn, email } = props;
     const navigate = useNavigate();
     const [switchChecked, setSwitchChecked] = useState(false); // Use useState hook for switch state
 
-    const onButtonClickedLogin = () => {
-        navigate('./login');
-    };
-
-    const onButtonClickSignin = () => {
-        navigate('./signup');
-    };
-
     const handleSwitchChange = (checked) => { // Define a handler for switch state change
         console.log(checked);
         setSwitchChecked(checked);
     };
 
+    const onButtonClickPassword = () => {
+        console.log("change password");
+    }
+    const onButtonClickLogout = () => {
+        console.log("logout");
+    }
+
     return (
         <div className='container'>
-            <div className='units'>
-                <h2 className="text">Units</h2> {/* Use className instead of class for JSX */}
+            <div className='box'>
+                <h2 className="text">Units</h2>
 
                 <label>
                     <span className='unit_text'>Metric</span>
@@ -49,6 +50,30 @@ const Profile = (props) => {
                     />
                     <span className='unit_text'>Imperial</span>
                 </label>
+            </div>
+
+            <div className='box'>
+                <div>
+                    <h2 className="text">Email</h2>
+                    <h2 className='text'>Password</h2>
+                </div>
+                <div>
+                    <h4 className='text'>john.cena@gmail.com</h4>
+                    <Button onClick={onButtonClickPassword}>Change Password</Button>
+                </div>
+                <Button onClick={onButtonClickLogout}>Log Out</Button>
+            </div>
+
+            <div className='box'>
+                <div>
+                    <h2 className='text'>Expiring Soon (defined as...)</h2>
+                    <p className='text'>Tomatoes, anchovies, blue cheese, bell peppers, ranch dressing,
+                        hollandaise sauce, tartar sauce, salmon, caviar</p>
+                    <div className='notify_box'>
+                        <h3 className='text'>Notify by Email: </h3>
+                        <input type='checkbox' className='checkbox'></input>
+                    </div>
+                </div>
             </div>
         </div>
     );
