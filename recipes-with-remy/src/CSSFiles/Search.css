@@ -1,0 +1,67 @@
+.fullPage{
+    width: 100vw;
+    height: 100vh;
+    border: 10px solid #333; /* Add a solid border */
+    padding: 5px; /* Add padding to create space inside the border */
+
+}
+
+
+.stickyHeader   
+    {
+        border: 10px solid #a81d1d;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        background-color: #272323;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+    
+    }
+
+.pageContent{
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+
+}
+
+.filterSide{
+    padding: 5px;
+    width: 33%;
+    height: 100%;
+    margin-top: 10%;
+    margin-right: 2%;
+    border: 3px solid black;
+
+}
+
+.filterCell{
+
+}
+.resultSide{
+    padding: 5px;
+    width: 64%;
+    height: 100%;
+    margin-top: 10%;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.searchSort{
+    padding: 5px;
+    border: 3px solid black;
+    height: 20%;
+}
+
+.result{
+    margin-top: 5%;
+    padding: 5px;
+    border: 3px solid black;
+}
+

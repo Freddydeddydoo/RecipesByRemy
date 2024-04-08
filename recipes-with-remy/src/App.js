@@ -7,6 +7,7 @@ import Home from './Pages/home'
 import Login from './Pages/login'
 import signup from './Pages/signup'
 import Saved from './Pages/saved'
+import Search from './Pages/search'
 import {useState, useEffect} from 'react'
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<signup/>} />
           <Route path="/saved" element={<Saved/>} />
+          <Route path="/search" element={<Search/>} />
         </Routes>
       </BrowserRouter>
     </div>
