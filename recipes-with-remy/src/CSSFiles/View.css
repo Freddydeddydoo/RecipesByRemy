@@ -23,6 +23,25 @@
     margin-bottom: 20px;
 }
 
+.column {
+    display: flex;
+}
+
+.box_small {
+    width: 40vw;
+    /* Adjust width as needed */
+    padding: 10px;
+    /* Add padding to create space between content and border */
+    background-color: rgb(164, 205, 167);
+    /* Set background color to light green */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
 .unit_text {
     margin: -10px 20px 0;
     /* Adjust the margin-top value to move the text up */
