@@ -7,6 +7,7 @@ import './../CSSFiles/View.css';
 // import { Slider } from '@mui/base/Slider';
 import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 import chicken from "./../Images/Italian-Chicken-and-Rice-2.jpg";
 
@@ -31,7 +32,7 @@ const View = (props) => {
 
     const handleSliderChange = (event, newValue) => {
         console.log(newValue);
-      };
+    };
 
     return (
         <div className='container'>
@@ -43,7 +44,7 @@ const View = (props) => {
                 <Button onClick={onButtonClickSave} variant='contained'>Save for Later</Button>
             </div>
 
-            <img src={chicken} width="300" height="400"/>
+            <img src={chicken} width="300" height="400" className='image' />
 
             <div className='mybox'>
                 <div>
@@ -72,7 +73,7 @@ const View = (props) => {
 
                             <div className='tableLine'>
                                 <div className='IngrName'>
-                                1 tbsp olive oil
+                                    1 tbsp olive oil
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -80,7 +81,7 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName'>
-                                4 chicken thigh cutlets
+                                    4 chicken thigh cutlets
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -88,7 +89,7 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName'>
-                                400 g can chopped tomatoes
+                                    400 g can chopped tomatoes
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -96,7 +97,7 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName'>
-                                1 1/2 cups chicken stock
+                                    1 1/2 cups chicken stock
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -104,7 +105,7 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName'>
-                                1 red onion , cut into 8 wedges
+                                    1 red onion , cut into 8 wedges
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -112,14 +113,14 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName'>
-                                1 red capsicum/bell pepper , deseeded and chopped
+                                    1 red capsicum/bell pepper , deseeded and chopped
                                 </div>
                                 <div className='percentage'>
                                     100%
                                 </div>
                             </div><div className='tableLine'>
                                 <div className='IngrName'>
-                                4 whole garlic cloves , smashed with the back of a knife
+                                    4 whole garlic cloves , smashed with the back of a knife
                                 </div>
                                 <div className='percentage'>
                                     80%
@@ -151,7 +152,145 @@ const View = (props) => {
                 </div>
             </div>
 
-            <Button variant='contained' onClick={onButtonClickMade}>I MADE THIS RECIPE (REMOVE INGREDIENTS FROM EFRIDGE)</Button>
+            <Button variant='contained' onClick={onButtonClickMade}>remove following ingredients from eFridge</Button>
+
+            <div className='mybox'>
+                <div>
+                    <div className='table50'>
+                        <div className='tableLine'>
+                            <div className='IngrName'>
+                                <h1>Ingredients</h1>
+                            </div>
+                            <div className='percentage'>
+                                <h1>Percent to Remove</h1>
+                            </div>
+                            <div className='equals'>
+                                <h1>Equals</h1>
+                            </div>
+
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                    1 tbsp olive oil
+                                </div>
+                                <div className='percentage'>
+                                    <TextField
+                                        hiddenLabel
+                                        id="filled-hidden-label-small"
+                                        defaultValue="100"
+                                        variant="filled"
+                                        size="small"
+                                    />
+                                </div>
+                                <div className='equals'>
+                                    1 tbsp olive oil
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                    4 chicken thigh cutlets
+                                </div>
+                                <div className='percentage'>
+                                    <TextField
+                                        hiddenLabel
+                                        id="filled-hidden-label-small"
+                                        defaultValue="100"
+                                        variant="filled"
+                                        size="small"
+                                    />
+                                </div>
+                                <div className='equals'>
+                                    4 chicken thigh cutlets
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                    400 g can chopped tomatoes
+                                </div>
+                                <div className='percentage'>
+                                    <TextField
+                                        hiddenLabel
+                                        id="filled-hidden-label-small"
+                                        defaultValue="100"
+                                        variant="filled"
+                                        size="small"
+                                    />
+                                </div>
+                                <div className='equals'>
+                                    400 g can chopped tomatoes
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                    1 1/2 cups chicken stock
+                                </div>
+                                <div className='percentage'>
+                                    <TextField
+                                        hiddenLabel
+                                        id="filled-hidden-label-small"
+                                        defaultValue="100"
+                                        variant="filled"
+                                        size="small"
+                                    />
+                                </div>
+                                <div className='equals'>
+                                    1 1/2 cups chicken stock
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                    1 red onion
+                                </div>
+                                <div className='percentage'>
+                                    <TextField
+                                        hiddenLabel
+                                        id="filled-hidden-label-small"
+                                        defaultValue="100"
+                                        variant="filled"
+                                        size="small"
+                                    />
+                                </div>
+                                <div className='equals'>
+                                    1 red onion
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                    1 red capsicum/bell pepper
+                                </div>
+                                <div className='percentage'>
+                                    <TextField
+                                        hiddenLabel
+                                        id="filled-hidden-label-small"
+                                        defaultValue="100"
+                                        variant="filled"
+                                        size="small"
+                                    />
+                                </div>
+                                <div className='equals'>
+                                    1 red capsicum/bell pepper
+                                </div>
+                            </div><div className='tableLine'>
+                                <div className='IngrName'>
+                                    4 whole garlic cloves
+                                </div>
+                                <div className='percentage'>
+                                    <TextField
+                                        hiddenLabel
+                                        id="filled-hidden-label-small"
+                                        defaultValue="100"
+                                        variant="filled"
+                                        size="small"
+                                    />
+                                </div>
+                                <div className='equals'>
+                                    4 whole garlic cloves
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

@@ -81,7 +81,8 @@
     flex-direction: column;
     display: flex;
     /* border: 3px solid orange; */
-
+    /* justify-content: flex-end; */
+    /* padding-left: 100px; */
 }
 
 .tableLine{
@@ -93,12 +94,15 @@
 }
 
 .IngrName{
-    width:74%;
+    width:52%;
     border: 1px solid black;
 }
 
 .percentage{
     width: 24%;
     border: 1px solid black;
-
+}
+.equals{
+    width: 24%;
+    border: 1px solid black;
 }
