@@ -8,6 +8,8 @@ import './../CSSFiles/View.css';
 import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
 
+import chicken from "./../Images/Italian-Chicken-and-Rice-2.jpg";
+
 function valuetext(value) {
     return `${value}`;
 }
@@ -41,7 +43,7 @@ const View = (props) => {
                 <Button onClick={onButtonClickSave} variant='contained'>Save for Later</Button>
             </div>
 
-            <img src="recipes-with-remy/src/Images/Italian-Chicken-and-Rice-2.jpg" />
+            <img src={chicken} width="300" height="400"/>
 
             <div className='mybox'>
                 <div>
