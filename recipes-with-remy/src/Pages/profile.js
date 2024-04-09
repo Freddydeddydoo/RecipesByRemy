@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'; // Removed duplicate import of useEffect
 
 import './../CSSFiles/Profile.css';
+// from: https://github.com/markusenglund/react-switch?tab=readme-ov-file
 import Switch from "react-switch";
 import { Button } from '@mui/base/Button';
 

@@ -5,7 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #8AA06B;
+  background-color: #8AA06B !important;
   background-image: url('./Images/BackgroundIMG.png'); 
   background-size: 275%;
   background-repeat: repeat;
