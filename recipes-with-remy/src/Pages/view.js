@@ -11,17 +11,16 @@ import TextField from '@mui/material/TextField';
 
 import chicken from "./../Images/Italian-Chicken-and-Rice-2.jpg";
 
-function valuetext(value) {
-    return `${value}`;
-}
-
-const onButtonClickMade = () => {
-    console.log("i hated this recipe fuck you");
-}
-
 const View = (props) => {
     const { loggedIn, email } = props;
     const navigate = useNavigate();
+
+    const [servings, setServings] = useState(1);
+    // var servings=1;
+
+    function valuetext(value) {
+        return `${value}`;
+    }
 
     const onButtonClickSave = () => {
         console.log("save for later");
@@ -30,8 +29,12 @@ const View = (props) => {
         console.log("back");
     }
 
+    const onButtonClickMade = () => {
+        console.log("i hated this recipe fuck you");
+    }
+
     const handleSliderChange = (event, newValue) => {
-        console.log(newValue);
+        setServings(newValue);
     };
 
     return (
@@ -73,7 +76,7 @@ const View = (props) => {
 
                             <div className='tableLine'>
                                 <div className='IngrName2'>
-                                    1 tbsp olive oil
+                                    {1 * servings} tbsp olive oil
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -81,7 +84,7 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName2'>
-                                    4 chicken thigh cutlets
+                                    {4 * servings} chicken thigh cutlets
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -89,7 +92,7 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName2'>
-                                    400 g can chopped tomatoes
+                                    {400 * servings} g can chopped tomatoes
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -97,7 +100,7 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName2'>
-                                    1 1/2 cups chicken stock
+                                    {1.5 * servings} cups chicken stock
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -105,7 +108,7 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName2'>
-                                    1 red onion , cut into 8 wedges
+                                    {1 * servings} red onion , cut into {8 * servings} wedges
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -113,14 +116,14 @@ const View = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName2'>
-                                    1 red capsicum/bell pepper , deseeded and chopped
+                                    {1 * servings} red capsicum/bell pepper , deseeded and chopped
                                 </div>
                                 <div className='percentage'>
                                     100%
                                 </div>
                             </div><div className='tableLine'>
                                 <div className='IngrName2'>
-                                    4 whole garlic cloves , smashed with the back of a knife
+                                    {4 * servings} whole garlic cloves , smashed with the back of a knife
                                 </div>
                                 <div className='percentage'>
                                     80%
