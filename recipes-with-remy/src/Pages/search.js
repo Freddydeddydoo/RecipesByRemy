@@ -69,7 +69,52 @@ const Search = (props) => {
 
     const handleChange = (event) => {
       setSort(event.target.value);
+      handleOrderChange();
     };
+    const [order, setOrder] = useState('-1');
+
+    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible1, setIsVisible1] = useState(true);
+    const [isVisible2, setIsVisible2] = useState(true);
+    const [isVisible3, setIsVisible3] = useState(true);
+    
+    const handleOrderChange = () => {
+        const newOrder = order === '-1' ? '1' : '-1';
+        setOrder(newOrder)
+    }
+    const HandleCheck = () =>{
+        setIsVisible(!isVisible)
+    }
+
+    const HandleCheck1 = () =>{
+        setIsVisible1(!isVisible1)
+    }
+
+    const HandleCheck2 = () =>{
+        setIsVisible2(!isVisible2)
+    }
+
+    const HandleCheck3 = () =>{
+        setIsVisible3(!isVisible3)
+    }
+
+    const HandleAll = () =>{
+        HandleCheck();
+        HandleCheck2();
+        HandleCheck3();
+        HandleCheck1();
+    }
+
+    const HideOther = (event) =>{
+        if (event.key === 'Enter') {
+            HandleCheck2();
+            HandleCheck3();
+            HandleCheck1();
+          }
+        
+    }
+
+
 
 
     const [components, setComponents] = useState([]);
@@ -115,6 +160,7 @@ const Search = (props) => {
                                     bgcolor: "antiquewhite"
 
                                 }}
+                                onChange={HandleCheck}
                                 multiple
                                 id="tags-standard"
                                 options={TenIngredients}
@@ -141,7 +187,7 @@ const Search = (props) => {
                                     bgcolor: "antiquewhite"
 
                                 }}
-
+                                onChange={HandleCheck1}
                                 multiple
                                 id="tags-standard"
                                 options={TenIngredients}
@@ -179,6 +225,10 @@ const Search = (props) => {
 
                         <div className='textBox'>
                         <TextField
+                            
+                            onChange={
+                                HandleAll}
+
                             sx={{ 
                                 borderRadius: 1,
                                 border: 1,
@@ -223,7 +273,8 @@ const Search = (props) => {
 
                     <div className='dietRes'>
                         <div className='checkBox'>
-                            <FormControlLabel
+                            <FormControlLabel    
+                            onChange={HandleCheck}                        
                             defaultChecked="unchecked"
                             value="top"
                             control={<Checkbox />}
@@ -234,6 +285,7 @@ const Search = (props) => {
 
                         <div className='checkBox'>
                             <FormControlLabel
+                            onChange={HandleCheck1} 
                             value="top"
                             control={<Checkbox />}
                             label="Gluten Free"
@@ -242,6 +294,7 @@ const Search = (props) => {
                         </div>
                         <div className='checkBox'>
                             <FormControlLabel
+                            onChange={HandleCheck2} 
                             value="top"
                             control={<Checkbox />}
                             label="Pescatarian"
@@ -250,6 +303,7 @@ const Search = (props) => {
                         </div>
                         <div className='checkBox'>
                             <FormControlLabel
+                            onChange={HandleCheck3} 
                             value="top"
                             control={<Checkbox />}
                             label="Plant-Based"
@@ -258,6 +312,7 @@ const Search = (props) => {
                         </div>
                         <div className='checkBox'>
                             <FormControlLabel
+                            onChange={HandleCheck2} 
                             value="top"
                             control={<Checkbox />}
                             label="Kosher"
@@ -266,6 +321,7 @@ const Search = (props) => {
                         </div>
                         <div className='checkBox'>
                             <FormControlLabel
+                            onChange={HandleCheck1} 
                             value="top"
                             control={<Checkbox />}
                             label="Halal"
@@ -289,6 +345,7 @@ const Search = (props) => {
                                 bgcolor: "antiquewhite"
 
                             }}
+                            onKeyDown={HideOther}
                             margin='normal'
                             label="Keyword Search"
                             placeholder='Enter keywords'
@@ -301,8 +358,9 @@ const Search = (props) => {
                             marginTop: 2
                         }}
                         >
-                            <InputLabel id="demo-simple-select-label">Sort By</InputLabel>
+                            <InputLabel>Sort By</InputLabel>
                                 <Select
+                                defaultValue="Expiring Ingredients"
                                 sx={{ 
                                     borderRadius: 1,
                                     border: 1,
@@ -310,48 +368,85 @@ const Search = (props) => {
                                     bgcolor: "antiquewhite",
     
                                 }}
-                                value={age}
-                                label="Sort By"
+
+
                                 onChange={handleChange}
+                                onClose={handleOrderChange}
                                 >
-                                <MenuItem value={10}>Most Ingredients Matched</MenuItem>
-                                <MenuItem value={20}>Lowest Cook Time</MenuItem>
-                                <MenuItem value={30}>Expiring Ingredients</MenuItem>
-                                <MenuItem value={40}>Lowest Calories</MenuItem>
-                                <MenuItem value={50}>Least Ingredients</MenuItem>
+                                <MenuItem value="Most Ingredients Matched">Most Ingredients Matched</MenuItem>
+                                <MenuItem value="Lowest Cook Time">Lowest Cook Time</MenuItem>
+                                <MenuItem value="Expiring Ingredients">Most Expiring Ingredients</MenuItem>
+                                <MenuItem value="Lowest Calories">Lowest Calories</MenuItem>
+                                <MenuItem value="Least Ingredients">Least Ingredients</MenuItem>
                             </Select>
                         </FormControl>
                         </div>
                     </div>
 
-<div className='result'>
-    <div className='table50'>
-        <div className='tableLine'>
-            <div className='IngrName'>
-                <h1>Ingredients</h1>
-            </div>
-            <div className='percentage'>
-                <h1>Percent in Fridge</h1>
-            </div>
-        <div className='tableLine'>
-            <div className='IngrName'>
-                 Pear
-            </div>
-            <div className='percentage'>
-                100%
-            </div>
-        </div>
-        <div className='tableLine'>
-            <div className='IngrName'>
-                Tomato
-            </div>
-            <div className='percentage'>
-                70%
-            </div>
-        </div>
-        </div>
+                    <div className='result'>
+                        {isVisible && <div style= {{order}} className='resultCard'>
+                            <div className='image'>
+                                IMAGE HERE
+                            </div>
 
-    </div>
+                            <div className='titleFax'>
+                                <div className='title'>
+                                    One Pot Italian Tomato Chicken and Rice
+                                </div>
+
+                                <div className='fax'>
+                                    <div className='faxCell'>
+                                        45 min
+                                    </div>
+                                    <div className='faxCell'>
+                                        650 cal
+                                    </div>
+                                    <div className='faxCell'>
+                                        6/8
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div className='buttons'>
+                                    <Button variant='contained' 
+                                    sx={{ 
+                                    borderRadius: 1,
+                                    border: 1,
+                                    width: 1,
+                                    bgcolor: "yellow",
+                                    color: 'black',
+                                    margin: 0.5,
+                                    display: 'flex',
+                                    justifyContent: 'center'
+                                    }}> More Info</Button>
+
+                                    <Button variant='contained'
+                                    sx={{ 
+                                    borderRadius: 1,
+                                    color: 'black',
+                                    border: 1,
+                                    width: 1,
+                                    bgcolor: "green",
+                                    margin: 0.5,
+                                    }}> View Recipe</Button>
+                            </div>
+
+                        </div>}
+                        
+
+                        {isVisible1 && <div className='resultCard'> 
+                        <h1>*Another Result *</h1>
+                        </div>}
+
+                        {isVisible2 && <div className='resultCard'> 
+                        <h1>*Another Result #2*</h1>
+                        </div>}
+
+                        {isVisible3 && <div className='resultCard'> 
+                        <h1>*Another Result #3 *</h1>
+                        </div>}
                     </div>
                 </div>
             </div>

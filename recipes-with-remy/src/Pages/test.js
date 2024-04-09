@@ -115,25 +115,25 @@ const ParentComponent = () => {
     <div className='table50'>
         <div className='tableLine'>
             <div className='IngrName'>
-                <h1> Ingredients</h1>
+                <h1>Ingredients</h1>
             </div>
             <div className='percentage'>
-                <h1> Percent in Fridge</h1>
+                <h1>Percent in Fridge</h1>
             </div>
         <div className='tableLine'>
             <div className='IngrName'>
-                <h1> Pear</h1>
+                 Pear
             </div>
             <div className='percentage'>
-                <p1> 100%</p1>
+                100%
             </div>
         </div>
         <div className='tableLine'>
             <div className='IngrName'>
-                <p1> Tomato</p1>
+                Tomato
             </div>
             <div className='percentage'>
-                <p1> 70%</p1>
+                70%
             </div>
         </div>
         </div>
