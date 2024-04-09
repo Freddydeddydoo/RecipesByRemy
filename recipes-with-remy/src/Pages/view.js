@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'; // Removed duplicate import of useEffect
 
 import './../CSSFiles/View.css';
-import { Button, Slider } from '@mui/base/';
+// import { Button } from '@mui/base/Button';
+// import { Slider } from '@mui/base/Slider';
+import Slider from '@mui/material/Slider';
+import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
 
 function SliderValueLabel({ children }) {
