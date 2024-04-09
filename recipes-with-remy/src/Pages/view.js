@@ -7,18 +7,13 @@ import './../CSSFiles/View.css';
 // import { Slider } from '@mui/base/Slider';
 import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
-import PropTypes from 'prop-types';
-
-function SliderValueLabel({ children }) {
-    return <span className="valueLabel">{children}</span>;
-}
-
-SliderValueLabel.propTypes = {
-    children: PropTypes.element.isRequired,
-};
 
 function valuetext(value) {
-    return `${value}°C`;
+    return `${value}`;
+}
+
+const onButtonClickMade = () => {
+    console.log("i hated this recipe fuck you");
 }
 
 const Profile = (props) => {
@@ -26,23 +21,69 @@ const Profile = (props) => {
     const navigate = useNavigate();
     const [switchChecked, setSwitchChecked] = useState(false); // Use useState hook for switch state
 
-    const handleSwitchChange = (checked) => { // Define a handler for switch state change
-        console.log(checked);
-        setSwitchChecked(checked);
-    };
-
     const onButtonClickSave = () => {
         console.log("save for later");
     }
 
+    const handleSliderChange = (event, newValue) => {
+        console.log(newValue);
+      };
+
     return (
         <div className='container'>
-            <div className='box'>
+            <div className='mybox'>
                 <h1 className='text'>One Pot Italian Tomato Chicken and Rice</h1>
                 <Button onClick={onButtonClickSave}>Save for Later</Button>
             </div>
 
             <img src="recipes-with-remy/src/Images/Italian-Chicken-and-Rice-2.jpg" />
+
+            <div className='mybox'>
+                <div>
+                    <h1>Number of servings:</h1>
+                    <Slider
+                        aria-label="Servings"
+                        defaultValue={1}
+                        getAriaValueText={valuetext}
+                        valueLabelDisplay="auto"
+                        marks
+                        min={1}
+                        max={10}
+                        onChange={handleSliderChange}
+                    />
+                </div>
+
+                <div>
+                    <div className='table50'>
+                        <div className='tableLine'>
+                            <div className='IngrName'>
+                                <h1>Ingredients</h1>
+                            </div>
+                            <div className='percentage'>
+                                <h1>Percent in Fridge</h1>
+                            </div>
+
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                    Pear
+                                </div>
+                                <div className='percentage'>
+                                    100%
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                    Tomato
+                                </div>
+                                <div className='percentage'>
+                                    70%
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
             <div className='column'>
                 <div className='box_small'>
@@ -58,35 +99,13 @@ const Profile = (props) => {
                 <div className='box_small'>
                     <div>
                         <h1 style={{ textAlign: 'left', marginLeft: '20px' }}>Nutritional Facts (per serving)</h1>
-                        <span className='facts'>Calories: 650 cal</span>
-                        <span className='facts'>Carbohydrates: 27g</span>
-                        <span className='facts'>Fat: 22g</span>
-                        <span className='facts'>Fiber: 3g</span>
-                        <span className='facts'>Protein: 48g</span>
+                        <span className='facts'>Calories: 573 kcal<br />Carbohydrates: 27g<br />Fat: 22g<br />Fiber: 3g<br />Protein: 48g</span>
+
                     </div>
                 </div>
             </div>
 
-            <div className='box'>
-                <div>
-                    <h1>Number of servings:</h1>
-                    <Slider
-                        aria-label="Servings"
-                        defaultValue={1}
-                        getAriaValueText={valuetext}
-                        shiftStep={1}
-                        step={1}
-                        marks
-                        min={1}
-                        max={10}
-                        slots={{ valueLabel: SliderValueLabel }}
-                    />
-                </div>
-
-                <div>
-                    <h1>Ingredients</h1>
-                </div>
-            </div>
+            <Button variant='contained' onClick={onButtonClickMade}>I MADE THIS RECIPE (REMOVE INGREDIENTS FROM EFRIDGE)</Button>
         </div>
     );
 };

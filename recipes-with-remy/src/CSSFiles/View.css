@@ -9,7 +9,7 @@
     flex-direction: column;
 }
 
-.box {
+.mybox {
     width: 80vw;
     /* Adjust width as needed */
     padding: 10px;
@@ -72,5 +72,32 @@
     position: relative;
     /* Adjust the value to move the text up or down */
     font-size: 22px;
+
+}
+
+.table50{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    /* border: 3px solid orange; */
+
+}
+
+.tableLine{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.IngrName{
+    width:74%;
+    border: 1px solid black;
+}
+
+.percentage{
+    width: 24%;
+    border: 1px solid black;
 
 }
