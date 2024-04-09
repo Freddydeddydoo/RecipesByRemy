@@ -84,6 +84,13 @@
     /* justify-content: flex-end; */
     /* padding-left: 100px; */
 }
+.table502{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 100px;
+}
 
 .tableLine{
     width: 100%;
@@ -95,6 +102,10 @@
 
 .IngrName{
     width:52%;
+    border: 1px solid black;
+}
+.IngrName2{
+    width:70%;
     border: 1px solid black;
 }
 

@@ -62,9 +62,9 @@ const View = (props) => {
                 </div>
 
                 <div>
-                    <div className='table50'>
+                    <div className='table502'>
                         <div className='tableLine'>
-                            <div className='IngrName'>
+                            <div className='IngrName2'>
                                 <h1>Ingredients</h1>
                             </div>
                             <div className='percentage'>
@@ -72,7 +72,7 @@ const View = (props) => {
                             </div>
 
                             <div className='tableLine'>
-                                <div className='IngrName'>
+                                <div className='IngrName2'>
                                     1 tbsp olive oil
                                 </div>
                                 <div className='percentage'>
@@ -80,7 +80,7 @@ const View = (props) => {
                                 </div>
                             </div>
                             <div className='tableLine'>
-                                <div className='IngrName'>
+                                <div className='IngrName2'>
                                     4 chicken thigh cutlets
                                 </div>
                                 <div className='percentage'>
@@ -88,7 +88,7 @@ const View = (props) => {
                                 </div>
                             </div>
                             <div className='tableLine'>
-                                <div className='IngrName'>
+                                <div className='IngrName2'>
                                     400 g can chopped tomatoes
                                 </div>
                                 <div className='percentage'>
@@ -96,7 +96,7 @@ const View = (props) => {
                                 </div>
                             </div>
                             <div className='tableLine'>
-                                <div className='IngrName'>
+                                <div className='IngrName2'>
                                     1 1/2 cups chicken stock
                                 </div>
                                 <div className='percentage'>
@@ -104,7 +104,7 @@ const View = (props) => {
                                 </div>
                             </div>
                             <div className='tableLine'>
-                                <div className='IngrName'>
+                                <div className='IngrName2'>
                                     1 red onion , cut into 8 wedges
                                 </div>
                                 <div className='percentage'>
@@ -112,14 +112,14 @@ const View = (props) => {
                                 </div>
                             </div>
                             <div className='tableLine'>
-                                <div className='IngrName'>
+                                <div className='IngrName2'>
                                     1 red capsicum/bell pepper , deseeded and chopped
                                 </div>
                                 <div className='percentage'>
                                     100%
                                 </div>
                             </div><div className='tableLine'>
-                                <div className='IngrName'>
+                                <div className='IngrName2'>
                                     4 whole garlic cloves , smashed with the back of a knife
                                 </div>
                                 <div className='percentage'>
