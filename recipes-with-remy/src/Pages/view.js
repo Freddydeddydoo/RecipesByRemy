@@ -16,13 +16,15 @@ const onButtonClickMade = () => {
     console.log("i hated this recipe fuck you");
 }
 
-const Profile = (props) => {
+const View = (props) => {
     const { loggedIn, email } = props;
     const navigate = useNavigate();
-    const [switchChecked, setSwitchChecked] = useState(false); // Use useState hook for switch state
 
     const onButtonClickSave = () => {
         console.log("save for later");
+    }
+    const onButtonClickBack = () => {
+        console.log("back");
     }
 
     const handleSliderChange = (event, newValue) => {
@@ -31,9 +33,12 @@ const Profile = (props) => {
 
     return (
         <div className='container'>
+
+            <Button onClick={onButtonClickBack} variant='contained'>Back</Button>
+
             <div className='mybox'>
                 <h1 className='text'>One Pot Italian Tomato Chicken and Rice</h1>
-                <Button onClick={onButtonClickSave}>Save for Later</Button>
+                <Button onClick={onButtonClickSave} variant='contained'>Save for Later</Button>
             </div>
 
             <img src="recipes-with-remy/src/Images/Italian-Chicken-and-Rice-2.jpg" />
@@ -65,7 +70,7 @@ const Profile = (props) => {
 
                             <div className='tableLine'>
                                 <div className='IngrName'>
-                                    Pear
+                                1 tbsp olive oil
                                 </div>
                                 <div className='percentage'>
                                     100%
@@ -73,10 +78,49 @@ const Profile = (props) => {
                             </div>
                             <div className='tableLine'>
                                 <div className='IngrName'>
-                                    Tomato
+                                4 chicken thigh cutlets
                                 </div>
                                 <div className='percentage'>
-                                    70%
+                                    100%
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                400 g can chopped tomatoes
+                                </div>
+                                <div className='percentage'>
+                                    100%
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                1 1/2 cups chicken stock
+                                </div>
+                                <div className='percentage'>
+                                    100%
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                1 red onion , cut into 8 wedges
+                                </div>
+                                <div className='percentage'>
+                                    100%
+                                </div>
+                            </div>
+                            <div className='tableLine'>
+                                <div className='IngrName'>
+                                1 red capsicum/bell pepper , deseeded and chopped
+                                </div>
+                                <div className='percentage'>
+                                    100%
+                                </div>
+                            </div><div className='tableLine'>
+                                <div className='IngrName'>
+                                4 whole garlic cloves , smashed with the back of a knife
+                                </div>
+                                <div className='percentage'>
+                                    80%
                                 </div>
                             </div>
                         </div>
@@ -110,4 +154,4 @@ const Profile = (props) => {
     );
 };
 
-export default Profile;
+export default View;

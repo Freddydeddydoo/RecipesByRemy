@@ -4,7 +4,7 @@
     /* Center horizontally */
     align-items: center;
     /* Center vertically */
-    height: 100vh;
+    height: 170vh;
     /* Set container height to full viewport height */
     flex-direction: column;
 }
