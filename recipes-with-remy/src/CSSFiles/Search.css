@@ -157,7 +157,7 @@
 .fax{
     display: flex;
     flex-direction: row;
-    height: 40%;
+    height: 60%;
     width: 100%;
     align-items: center;
 }
