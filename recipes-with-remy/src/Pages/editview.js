@@ -12,6 +12,7 @@ import TextField from '@mui/material/TextField';
 import chicken from "./../Images/garlic.jpeg";
 import { padding } from '@mui/system';
 import IconButton from '@mui/material/IconButton';
+import Header from './../Components/header';
 
 
 
@@ -500,6 +501,8 @@ onClick={() => deleteComponentIngr(6)}>
 
     return (
         <div className='container'>
+
+            {/* <Header/> */}
             <Button sx={{marginBlock: "1%", alignSelf:"left", width:"25%"}} onClick={onButtonClickBack} variant='contained'>Back</Button>
 
             <div className='box' style={{
