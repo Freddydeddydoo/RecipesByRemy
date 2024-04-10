@@ -183,23 +183,13 @@ const View = (props) => {
                 </div>
             </div>
 
-            <div className='column'>
-                <div className='box_small'>
-                    <div>
-                        <h1>Steps</h1>
-                        <ol>
-                            <li>Heat oven to 200c | 400F. Heat the oil in a large, shallow ovenproof cast iron skillet/or pan. Add the chicken and fry for 3-4 mins on medium-high heat. Turn and fry again until golden all over. Add the onion, red capsicum/peppers and garlic and fry for about 3 mins or until lightly golden and onion is transparent. Transfer the chicken onto a plate; stir the olives, sundried tomato strips, basil, oregano, parsley and rice into the pan; allow the rice to soak up all the juices. Return the chicken pieces back to the pan on top of the rice; add the tomatoes and stock. Bring everything to the boil, rotate the chicken in the sauce before transferring to the oven. Cover with foil and allow to bake for about 40 minutes (depending on your oven) until the rice has softened. Remove cover and change oven settings to grill/broil on medium heat; grill/broil for a further 8-10 minutes or until the chicken is crispy and golden</li>
-                            <li>Season with a little salt to taste and sprinkle with freshly chopped parsley and grated parmesan cheese (optional).</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div className='box_small'>
-                    <div>
-                        <h1 style={{ textAlign: 'left', marginLeft: '20px' }}>Nutritional Facts (per serving)</h1>
-                        <span className='facts'>Calories: 573 kcal<br />Carbohydrates: 27g<br />Fat: 22g<br />Fiber: 3g<br />Protein: 48g</span>
-
-                    </div>
+            <div className='box'>
+                <div>
+                    <h1>Steps</h1>
+                    <ol>
+                        <li>Heat oven to 200c | 400F. Heat the oil in a large, shallow ovenproof cast iron skillet/or pan. Add the chicken and fry for 3-4 mins on medium-high heat. Turn and fry again until golden all over. Add the onion, red capsicum/peppers and garlic and fry for about 3 mins or until lightly golden and onion is transparent. Transfer the chicken onto a plate; stir the olives, sundried tomato strips, basil, oregano, parsley and rice into the pan; allow the rice to soak up all the juices. Return the chicken pieces back to the pan on top of the rice; add the tomatoes and stock. Bring everything to the boil, rotate the chicken in the sauce before transferring to the oven. Cover with foil and allow to bake for about 40 minutes (depending on your oven) until the rice has softened. Remove cover and change oven settings to grill/broil on medium heat; grill/broil for a further 8-10 minutes or until the chicken is crispy and golden</li>
+                        <li>Season with a little salt to taste and sprinkle with freshly chopped parsley and grated parmesan cheese (optional).</li>
+                    </ol>
                 </div>
             </div>
 
