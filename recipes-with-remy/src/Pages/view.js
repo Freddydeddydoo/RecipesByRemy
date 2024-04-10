@@ -4,11 +4,9 @@ import { useState } from 'react'; // Removed duplicate import of useEffect
 
 import './../CSSFiles/View.css';
 import Header from './../Components/header';
-
 import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-
 import chicken from "./../Images/Italian-Chicken-and-Rice-2.jpg";
 import { padding } from '@mui/system';
 
@@ -75,7 +73,6 @@ const View = (props) => {
             <Header />
 
             <Button onClick={onButtonClickBack} variant='contained'>Back to Search</Button>
-
             <div className='box'>
                 <h1 className='text'>One Pot Italian Tomato Chicken and Rice</h1>
                 <Button onClick={onButtonClickSave} variant='contained' disabled={saveDisabled}>{saveTxt}</Button>
@@ -182,7 +179,6 @@ const View = (props) => {
                     </div>
                 </div>
             </div>
-
             <div className='box'>
                 <div>
                     <h1>Steps</h1>
@@ -340,3 +336,4 @@ const View = (props) => {
 };
 
 export default View;
+

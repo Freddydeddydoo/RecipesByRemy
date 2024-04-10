@@ -1,0 +1,262 @@
+.fullPage{
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+
+.stickyHeader   
+    {
+        border: 10px solid #a81d1d;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        background-color: #272323;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+    
+    }
+
+.pageContent{
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+
+}
+
+.filterSide{
+    padding: 5px;
+    width: 33%;
+    height: 100%;
+    margin-top: 10%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filterCell{
+    margin-block: 1%;
+    width: 90%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    
+
+}
+.resultSide{
+    padding: 5px;
+    width: 64%;
+    height: 100%;
+    margin-top: 10%;
+    border-left: 3px solid black;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.searchSort{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.keywordSearch{
+    width: 50%;
+    padding-left: 1%;
+    justify-content: center;
+
+}
+
+.sorter{
+    width: 17%;
+
+    justify-content: right;
+
+}
+
+.result{
+    
+    padding: 5px;
+    
+    border: 3px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+
+.resultCard{
+    width: 95%;
+    padding: 10px;
+    margin-left: 2%;
+    margin-block: 1%;
+    border: 2px solid black;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+
+    border-radius: 10px;
+
+    justify-content: center;
+
+}
+
+.FullresultCard{
+    width: 95%;
+    padding: 5px;
+    margin-left: 2%;
+    margin-block: 1%;
+    border: 3px solid black;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+
+
+    justify-content: center;
+
+}
+
+.image{
+    margin-inline: 5%;
+    height: 100%;
+    border: 3px solid black;
+    flex: 1;
+
+
+}
+
+.titleFax{
+    margin-inline: 5%;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+
+}
+
+.title{
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+
+}
+
+.fax{
+    display: flex;
+    flex-direction: row;
+    height: 25%;
+    width: 100%;
+    align-items: center;
+}
+
+.faxCell{
+    background-color: antiquewhite;
+
+    width: 40%;
+    height: 110%;
+    border: 3px solid black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+}
+
+.buttons{
+    margin-inline: 3%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    height: 50%;
+    justify-content: center;
+
+}
+.excludeInclude{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-top: 10px;
+    width: 105%;
+    justify-content: center;
+
+}
+
+.searchNclicker{
+    padding: 3px;
+    width: 48%;
+
+    
+
+}
+
+
+.textBox{
+    width: 25%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.checkBox{
+    padding: 10px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-inline:  5%;
+    margin-block: 1%;
+    width: 25%;
+}
+
+.dietRes{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+.table50{
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    border: 3px solid orange;
+
+}
+
+.tableLine{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.IngrName{
+    width:74%;
+    border: 1px solid black;
+}
+
+.percentage{
+    width: 24%;
+    border: 1px solid black;
+
+}

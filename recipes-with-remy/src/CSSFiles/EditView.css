@@ -1,0 +1,165 @@
+.container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    /* height: 220vh; */
+    height: min-content;
+    /* Set container height to full viewport height */
+    flex-direction: column;
+}
+
+.box {
+    width: 90vw;
+    /* Adjust width as needed */
+    padding: 10px;
+    /* Add padding to create space between content and border */
+    background-color: rgb(164, 205, 167);
+    /* Set background color to light green */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.column {
+    display: flex;
+}
+
+.box_small {
+    width: 40vw;
+    /* Adjust width as needed */
+    padding: 10px;
+    /* Add padding to create space between content and border */
+    background-color: rgb(164, 205, 167);
+    /* Set background color to light green */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
+.unit_text {
+    margin: -10px 20px 0;
+    /* Adjust the margin-top value to move the text up */
+    position: relative;
+    top: -5px;
+    /* Adjust the value to move the text up or down */
+    font-size: 22px;
+}
+
+.text {
+    margin: 10px 20px;
+    text-align: left;
+}
+
+.notify_box {
+    /* Add padding to create space between content and border */
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    transform: scale(2);
+}
+
+.facts {
+    margin: -10px 20px 0;
+    /* Adjust the margin-top value to move the text up */
+    position: relative;
+    /* Adjust the value to move the text up or down */
+    font-size: 22px;
+
+}
+
+.table50{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    /* border: 3px solid orange; */
+    /* justify-content: flex-end; */
+    /* padding-left: 100px; */
+}
+.table502{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 100px;
+}
+
+.tableLine{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.IngrName{
+    width:52%;
+    border: 1px solid black;
+}
+.IngrName2{
+    width:70%;
+    border: 1px solid black;
+}
+
+.percentage{
+    width: 24%;
+    border: 1px solid black;
+}
+.equals{
+    width: 24%;
+    border: 1px solid black;
+}
+
+.servings{
+    padding-left:200px;
+    padding-right:200px;
+}
+
+
+.faxBox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row{
+
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.IngrText{
+    flex-grow: 1;
+}
+
+.stepRow{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.Stepcolumn{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
