@@ -1,11 +1,17 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
+import './../CSSFiles/signup.css'
 import {useState, useEffect} from 'react'
 
 
 const Signup = (props) => {
     const { loggedIn, email } = props
+    const navigate = useNavigate()
+
+    const onButtonClickedLogin = () => {
+        navigate('/login')
+    }
 
 
     return (
@@ -31,13 +37,19 @@ const Signup = (props) => {
             </div>
             <div className={'signInTxt'}>
                 by clicking 'make account' you agree to our 
-                <a href='https://www.google.com'> terms of service</a>.
+                <a style={{cursor: 'pointer', textDecoration: 'underline', color: 'blue'}} href='https://www.google.com'> terms of service</a>.
                 Enjoy cooking!
             </div>
             <div className="signinButton">
                 <Button variant='success' className={"CustomGreen"} size='small'>
                     Sign In 
                 </Button>
+            </div>
+            <div className={'signInTxt'}>
+                Already have an account?
+                    <a style={{cursor: 'pointer', textDecoration: 'underline', color: 'blue'}} onClick={onButtonClickedLogin}>
+                        Try Logging in!
+                    </a>
             </div>
         </div>
     </div>

@@ -14,9 +14,21 @@
     display: flex;
     flex-direction: column;
     background-color: #7c9060;
-    height: 60vh;
+    height: 65vh;
     width: 55vh;
     /* Add some padding for aesthetic purposes */
+    padding: 2%;
+    /* Center the box content */
+    text-align: left;
+    font-size: smaller;
+}
+
+.LogInBox{
+    display: flex;
+    flex-direction: column;
+    background-color: #7c9060;
+    height: 40vh;
+    width: 55vh;
     padding: 2%;
     /* Center the box content */
     text-align: left;
@@ -42,6 +54,7 @@
 
 .signInTxt{
     text-align: center;
+    margin-top: 2px;
 }
 
 .signinButton{
