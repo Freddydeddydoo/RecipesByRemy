@@ -72,6 +72,7 @@
 .Bottom {
     flex: 65;
     height: 65vh;
+    overflow-y: scroll;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 10px; /* Adjust the gap size as necessary */

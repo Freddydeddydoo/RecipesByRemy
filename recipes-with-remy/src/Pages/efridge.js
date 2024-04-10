@@ -41,12 +41,6 @@ const Efridge = () => {
             Your eFridge
           </div>
           <div className='Bottom'>
-            <div>bottom</div>
-            <div>bottom</div>
-            <div>bottom</div>
-            <div>bottom</div>
-            <div>bottom</div>
-            <div>bottom</div>
           </div>
         </div>
       </div>
