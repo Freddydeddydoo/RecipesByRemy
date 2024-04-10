@@ -1,0 +1,16 @@
+.FoodBox {
+  display: flex;
+  flex-direction: column;
+
+    background-color: white;
+    padding: 10px; /* Adds padding inside each .FoodBox */
+    width: 150px; /* Ensures it takes the full width of the grid cell */
+    height: 150px; /* If you want each box to take full height of the grid cell */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    border-style: solid;
+    border-color: black;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+  }
+  
