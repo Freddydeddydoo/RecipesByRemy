@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100vh;
+  /* Set container height to full viewport height */
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.box {
+  width: 80vw;
+  /* Adjust width as needed */
+  padding: 10px;
+  /* Add padding to create space between content and border */
+  background-color: rgb(164, 205, 167);
+  /* Set background color to light green */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.unit_text {
+  margin: -10px 20px 0;
+  /* Adjust the margin-top value to move the text up */
+  position: relative;
+  top: -5px;
+  /* Adjust the value to move the text up or down */
+  font-size: 22px;
+}
+
+.text {
+  margin: 10px 20px;
+  text-align: left;
+}
+
+.notify_box {
+  /* Add padding to create space between content and border */
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  transform: scale(2);
+}
