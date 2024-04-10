@@ -61,8 +61,8 @@ const Profile = (props) => {
             <div className='box'>
                 <div>
                     <h2 className='text'>Expiring Soon*</h2>
-                    <p className='text'>Tomatoes, anchovies, blue cheese, bell peppers, ranch dressing,
-                        hollandaise sauce, tartar sauce, salmon, caviar</p>
+                    <p className='text'>Tomatoes (Apr 12), anchovies (Apr 15), blue cheese (Apr 10), bell peppers (Apr 10), ranch dressing (May 23),
+                        hollandaise sauce (May 27), tartar sauce (May 3), salmon (Apr 11), caviar (Jun 4)</p>
                     <span className='text'>
                         * We define "soon" as being two-thirds through the period [date of expiry]-[date packed].
                     </span>

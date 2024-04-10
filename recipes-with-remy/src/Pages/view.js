@@ -26,7 +26,6 @@ const View = (props) => {
 
     const [saveTxt, setSaveTxt] = useState('Save for Later');
 
-
     function valuetext(value) {
         return `${value}`;
     }
@@ -51,12 +50,12 @@ const View = (props) => {
         setServings(newValue);
     };
 
-    const onChangePercent = (event) => {
+    const onChangeRemove = (event) => {
         const newValue = event.target.value;
         console.log(newValue);
         setPercent(newValue);
     }
-    const onChangePercent2 = (event) => {
+    const onChangeRemove2 = (event) => {
         const newValue = event.target.value;
         console.log(newValue);
         setPercent2(newValue);
@@ -127,7 +126,7 @@ const View = (props) => {
                                     {1 * servings} tbsp olive oil
                                 </div>
                                 <div className='percentage'>
-                                    100%
+                                    {(Math.min(7 / (servings), 1) * 100).toFixed(2)}%
                                 </div>
                             </div>
                             <div className='tableLine'>
@@ -135,7 +134,7 @@ const View = (props) => {
                                     {4 * servings} chicken thigh cutlets
                                 </div>
                                 <div className='percentage'>
-                                    100%
+                                    {(Math.min(10 / (4 * servings), 1) * 100).toFixed(2)}%
                                 </div>
                             </div>
                             <div className='tableLine'>
@@ -143,7 +142,7 @@ const View = (props) => {
                                     {400 * servings} g can chopped tomatoes
                                 </div>
                                 <div className='percentage'>
-                                    100%
+                                    {(Math.min(1200 / (400 * servings), 1) * 100).toFixed(2)}%
                                 </div>
                             </div>
                             <div className='tableLine'>
@@ -151,7 +150,7 @@ const View = (props) => {
                                     {1.5 * servings} cups chicken stock
                                 </div>
                                 <div className='percentage'>
-                                    100%
+                                    {(Math.min(5 / (1.5 * servings), 1) * 100).toFixed(2)}%
                                 </div>
                             </div>
                             <div className='tableLine'>
@@ -159,7 +158,7 @@ const View = (props) => {
                                     {1 * servings} red onion , cut into {8 * servings} wedges
                                 </div>
                                 <div className='percentage'>
-                                    100%
+                                    {(Math.min(2 / (servings), 1) * 100).toFixed(2)}%
                                 </div>
                             </div>
                             <div className='tableLine'>
@@ -167,14 +166,14 @@ const View = (props) => {
                                     {1 * servings} red capsicum/bell pepper , deseeded and chopped
                                 </div>
                                 <div className='percentage'>
-                                    100%
+                                    {(Math.min(1 / (servings), 1) * 100).toFixed(2)}%
                                 </div>
                             </div><div className='tableLine'>
                                 <div className='IngrName2'>
                                     {4 * servings} whole garlic cloves , smashed with the back of a knife
                                 </div>
                                 <div className='percentage'>
-                                    80%
+                                    {(Math.min(3 / (4 * servings), 1) * 100).toFixed(2)}%
                                 </div>
                             </div>
                         </div>
@@ -231,7 +230,7 @@ const View = (props) => {
                                         defaultValue={percent}
                                         variant="filled"
                                         size="small"
-                                        onChange={onChangePercent}
+                                        onChange={onChangeRemove}
                                     />
                                 </div>
                                 <div className='equals'>
@@ -249,7 +248,7 @@ const View = (props) => {
                                         defaultValue={percent2}
                                         variant="filled"
                                         size="small"
-                                        onChange={onChangePercent2}
+                                        onChange={onChangeRemove2}
                                     />
                                 </div>
                                 <div className='equals'>
