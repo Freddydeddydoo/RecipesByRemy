@@ -7,6 +7,7 @@
   height: 100vh;
   /* Set container height to full viewport height */
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .box {

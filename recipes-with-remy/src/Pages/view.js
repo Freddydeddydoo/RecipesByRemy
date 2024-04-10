@@ -10,31 +10,65 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
 import chicken from "./../Images/Italian-Chicken-and-Rice-2.jpg";
+import { padding } from '@mui/system';
 
 const View = (props) => {
     const { loggedIn, email } = props;
     const navigate = useNavigate();
 
     const [servings, setServings] = useState(1);
-    // var servings=1;
+    const [percent, setPercent] = useState(100);
+    const [percent2, setPercent2] = useState(100);
+
+    const [removeDisabled, setRemoveDisabled] = useState(false);
+    const [saveDisabled, setSaveDisabled] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const [saveTxt, setSaveTxt] = useState('Save for Later');
+
 
     function valuetext(value) {
         return `${value}`;
     }
 
     const onButtonClickSave = () => {
+        if (saveTxt == "Save for Later") {
+            setSaveTxt('Unsave');
+        } else {
+            setSaveTxt('Save for Later');
+        }
+        setSaveDisabled(true); // Disable the button
+        setTimeout(() => {
+            setSaveDisabled(false); // Enable the button after 10 seconds
+        }, 2000);
         console.log("save for later");
     }
     const onButtonClickBack = () => {
-        console.log("back");
-    }
-
-    const onButtonClickMade = () => {
-        console.log("i hated this recipe fuck you");
+        navigate("/search");
     }
 
     const handleSliderChange = (event, newValue) => {
         setServings(newValue);
+    };
+
+    const onChangePercent = (event) => {
+        const newValue = event.target.value;
+        console.log(newValue);
+        setPercent(newValue);
+    }
+    const onChangePercent2 = (event) => {
+        const newValue = event.target.value;
+        console.log(newValue);
+        setPercent2(newValue);
+    }
+
+    const onButtonClickMade = () => {
+        setRemoveDisabled(true); // Disable the button
+        setMessage('Ingredients removed!'); // Set the message
+        setTimeout(() => {
+            setRemoveDisabled(false); // Enable the button after 10 seconds
+            setMessage(''); // Clear the message
+        }, 5000);
     };
 
     return (
@@ -42,29 +76,43 @@ const View = (props) => {
 
             <Button onClick={onButtonClickBack} variant='contained'>Back</Button>
 
-            <div className='mybox'>
+            <div className='box'>
                 <h1 className='text'>One Pot Italian Tomato Chicken and Rice</h1>
-                <Button onClick={onButtonClickSave} variant='contained'>Save for Later</Button>
+                <Button onClick={onButtonClickSave} variant='contained' disabled={saveDisabled}>{saveTxt}</Button>
             </div>
 
-            <img src={chicken} width="300" height="400" className='image' />
-
-            <div className='mybox'>
+            <div className='column'>
                 <div>
-                    <h1>Number of servings:</h1>
-                    <Slider
-                        aria-label="Servings"
-                        defaultValue={1}
-                        getAriaValueText={valuetext}
-                        valueLabelDisplay="auto"
-                        marks
-                        min={1}
-                        max={10}
-                        onChange={handleSliderChange}
-                    />
+                    <img src={chicken} width="300" height="400" className='image' />
                 </div>
 
+                <div className='box_small'>
+                    <div>
+                        <h1 style={{ textAlign: 'left', marginLeft: '20px' }}>Nutritional Facts (per serving)</h1>
+                        <span className='facts'>Calories: 573 kcal<br />Carbohydrates: 27g<br />Fat: 22g<br />Fiber: 3g<br />Protein: 48g</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div className='box'>
                 <div>
+
+
+                    <div className='servings'>
+                        <h3>Number of servings:</h3>
+                        <Slider
+                            aria-label="Servings"
+                            defaultValue={1}
+                            getAriaValueText={valuetext}
+                            valueLabelDisplay="auto"
+                            marks
+                            min={1}
+                            max={10}
+                            onChange={handleSliderChange}
+                        />
+                    </div>
+
                     <div className='table502'>
                         <div className='tableLine'>
                             <div className='IngrName2'>
@@ -155,9 +203,10 @@ const View = (props) => {
                 </div>
             </div>
 
-            <Button variant='contained' onClick={onButtonClickMade}>remove following ingredients from eFridge</Button>
+            <Button variant='contained' onClick={onButtonClickMade} disabled={removeDisabled}>remove following ingredients from eFridge</Button>
+            <p>{message}</p>
 
-            <div className='mybox'>
+            <div className='box'>
                 <div>
                     <div className='table50'>
                         <div className='tableLine'>
@@ -179,13 +228,14 @@ const View = (props) => {
                                     <TextField
                                         hiddenLabel
                                         id="filled-hidden-label-small"
-                                        defaultValue="100"
+                                        defaultValue={percent}
                                         variant="filled"
                                         size="small"
+                                        onChange={onChangePercent}
                                     />
                                 </div>
                                 <div className='equals'>
-                                    1 tbsp olive oil
+                                    {percent / 100} tbsp olive oil
                                 </div>
                             </div>
                             <div className='tableLine'>
@@ -196,13 +246,14 @@ const View = (props) => {
                                     <TextField
                                         hiddenLabel
                                         id="filled-hidden-label-small"
-                                        defaultValue="100"
+                                        defaultValue={percent2}
                                         variant="filled"
                                         size="small"
+                                        onChange={onChangePercent2}
                                     />
                                 </div>
                                 <div className='equals'>
-                                    4 chicken thigh cutlets
+                                    {percent2 / 100 * 4} chicken thigh cutlets
                                 </div>
                             </div>
                             <div className='tableLine'>

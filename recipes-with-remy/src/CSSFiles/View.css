@@ -10,8 +10,8 @@
     flex-direction: column;
 }
 
-.mybox {
-    width: 80vw;
+.box {
+    width: 90vw;
     /* Adjust width as needed */
     padding: 10px;
     /* Add padding to create space between content and border */
@@ -37,7 +37,7 @@
     /* Set background color to light green */
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
     margin: 20px;
@@ -116,4 +116,9 @@
 .equals{
     width: 24%;
     border: 1px solid black;
+}
+
+.servings{
+    padding-left:200px;
+    padding-right:200px;
 }

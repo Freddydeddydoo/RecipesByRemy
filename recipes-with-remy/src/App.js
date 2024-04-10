@@ -20,6 +20,7 @@ function App() {
           <Route path="/" element={<View email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<signup/>} />
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
       </BrowserRouter>
     </div>

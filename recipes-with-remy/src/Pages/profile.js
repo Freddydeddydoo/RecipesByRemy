@@ -12,6 +12,7 @@ const Profile = (props) => {
     const { loggedIn, email } = props;
     const navigate = useNavigate();
     const [switchChecked, setSwitchChecked] = useState(false); // Use useState hook for switch state
+    const [showEmailSentText, setShowEmailSentText] = useState(false);
 
     const handleSwitchChange = (checked) => { // Define a handler for switch state change
         console.log(checked);
@@ -19,10 +20,14 @@ const Profile = (props) => {
     };
 
     const onButtonClickPassword = () => {
-        console.log("change password");
-    }
+        setShowEmailSentText(true);
+        setTimeout(() => {
+            setShowEmailSentText(false);
+        }, 5000); // Hide the text after 5 seconds
+    };
     const onButtonClickLogout = () => {
         console.log("logout");
+        navigate("/login");
     }
 
     return (
@@ -55,25 +60,32 @@ const Profile = (props) => {
 
             <div className='box'>
                 <div>
+                    <h2 className='text'>Expiring Soon*</h2>
+                    <p className='text'>Tomatoes, anchovies, blue cheese, bell peppers, ranch dressing,
+                        hollandaise sauce, tartar sauce, salmon, caviar</p>
+                    <span className='text'>
+                        * We define "soon" as being two-thirds through the period [date of expiry]-[date packed].
+                    </span>
+
+                    <div className='notify_box'>
+                        <h3 className='text'>Notify by Email: </h3>
+                        <input type='checkbox' className='checkbox'></input>
+                    </div>
+                </div>
+            </div>
+
+            <div className='box'>
+                <div>
                     <h2 className="text">Email</h2>
                     <h2 className='text'>Password</h2>
                 </div>
                 <div>
                     <h4 className='text'>john.cena@gmail.com</h4>
                     <Button onClick={onButtonClickPassword}>Change Password</Button>
+                    {showEmailSentText && <p>Email sent with instructions</p>}
                 </div>
-                <Button onClick={onButtonClickLogout}>Log Out</Button>
-            </div>
-
-            <div className='box'>
                 <div>
-                    <h2 className='text'>Expiring Soon (defined as...)</h2>
-                    <p className='text'>Tomatoes, anchovies, blue cheese, bell peppers, ranch dressing,
-                        hollandaise sauce, tartar sauce, salmon, caviar</p>
-                    <div className='notify_box'>
-                        <h3 className='text'>Notify by Email: </h3>
-                        <input type='checkbox' className='checkbox'></input>
-                    </div>
+                    <Button onClick={onButtonClickLogout}>Log Out</Button>
                 </div>
             </div>
         </div>
