@@ -8,7 +8,6 @@ import './../CSSFiles/EditView.css';
 import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-
 import chicken from "./../Images/garlic.jpeg";
 import { padding } from '@mui/system';
 import IconButton from '@mui/material/IconButton';
@@ -501,7 +500,7 @@ onClick={() => deleteComponentIngr(6)}>
 
     return (
         <div className='container'>
-
+            <Header/>
             {/* <Header/> */}
             <Button sx={{marginBlock: "1%", alignSelf:"left", width:"25%"}} onClick={onButtonClickBack} variant='contained'>Back</Button>
 

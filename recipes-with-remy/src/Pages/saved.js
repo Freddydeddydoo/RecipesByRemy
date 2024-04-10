@@ -14,6 +14,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Header from '../Components/header'
 
 const Saved = (props) => {
     const { loggedIn, email } = props
@@ -22,9 +23,7 @@ const Saved = (props) => {
     return (
     
     <div class="fullPage">
-        <div className="stickyHeader">
-            <h1>Eventual NavBar</h1>
-        </div>
+        <Header/>
 
         <div className="paramBox">
             <div className='topTitle'>

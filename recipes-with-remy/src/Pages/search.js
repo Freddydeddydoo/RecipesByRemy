@@ -14,6 +14,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Header from '../Components/header'
 
 
 
@@ -141,7 +142,7 @@ const Search = (props) => {
 
     return (
         <div className='fullPage'>
-            {/* <Header/> */}
+            <Header/>
 
             <div className='pageContent'>
                 <div className='filterSide'>
