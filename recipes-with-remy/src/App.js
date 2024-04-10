@@ -12,6 +12,7 @@ import {useState, useEffect} from 'react'
 import Test from './Pages/test'
 import Test2 from './Pages/test2'
 import View from './Pages/view'
+import EditView from './Pages/editview'
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
           <Route path="/test" element={<Test/>} />
           <Route path="/test2" element={<Test2/>} />
           <Route path="/view" element={<View/>} />
+          <Route path="/editview" element={<EditView/>} />
+
         </Routes>
       </BrowserRouter>
     </div>

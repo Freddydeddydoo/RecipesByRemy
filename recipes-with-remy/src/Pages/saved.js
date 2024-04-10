@@ -125,7 +125,10 @@ const Saved = (props) => {
                         margin: 0.5,
                         display: 'flex',
                         justifyContent: 'center'
-                        }}> View Recipe</Button>
+                        }}
+                        onClick={() => {
+                            navigate("/view");
+                          }}> View Recipe</Button>
 
                         <Button variant='contained'
                         sx={{ 
@@ -135,7 +138,11 @@ const Saved = (props) => {
                         width: 1,
                         bgcolor: "#DF950A",
                         margin: 0.5,
-                        }}> Edit Recipe</Button>
+                        }}
+                        onClick={() => {
+                            navigate("/editview");
+                          }}
+                        > Edit Recipe</Button>
 
                         <Button variant='contained'
                         sx={{ 

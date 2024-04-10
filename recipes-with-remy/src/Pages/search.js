@@ -15,6 +15,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+
+
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -86,6 +89,15 @@ const Search = (props) => {
         setIsVisible(!isVisible)
     }
 
+    const [showMessage, setShowMessage] = useState(false);
+
+    const inProgress = () => {
+      setShowMessage(true);
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 3000); // 3000 milliseconds = 3 seconds
+    };
+
     const HandleCheck1 = () =>{
         setIsVisible1(!isVisible1)
     }
@@ -129,9 +141,7 @@ const Search = (props) => {
 
     return (
         <div className='fullPage'>
-            <div className='stickyHeader'>
-                Eventual Nav Bar
-            </div>
+            {/* <Header/> */}
 
             <div className='pageContent'>
                 <div className='filterSide'>
@@ -400,13 +410,13 @@ const Search = (props) => {
 
                                 <div className='fax'>
                                     <div className='faxCell'>
-                                        45 min
+                                    45 min to prepare
                                     </div>
                                     <div className='faxCell'>
-                                        650 cal
+                                    650 cal per Serving
                                     </div>
                                     <div className='faxCell'>
-                                        6/8
+                                    6/8 Ingredients
                                     </div>
                                 </div>
 
@@ -424,7 +434,15 @@ const Search = (props) => {
                                     margin: 0.5,
                                     display: 'flex',
                                     justifyContent: 'center'
-                                    }}> More Info</Button>
+                                    
+                                    }}
+
+                                    onClick={() => {
+                                        alert('Feature Under Development!');
+                                      }}
+                                    > More Info</Button>
+
+                                    
 
                                     <Button variant='contained'
                                     sx={{ 
@@ -434,7 +452,11 @@ const Search = (props) => {
                                     width: 1,
                                     bgcolor: "green",
                                     margin: 0.5,
-                                    }}> View Recipe</Button>
+                                    }}
+                                    onClick={() => {
+                                        navigate("/view");
+                                      }}
+                                    > View Recipe</Button>
                             </div>
 
                         </div>}

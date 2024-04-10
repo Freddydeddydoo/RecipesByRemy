@@ -1,40 +1,35 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Slider from '@mui/material/Slider';
+import React, { useState } from 'react';
+import Button from '@mui/material/Button';
 
 
-export default function ContinuousSlider() {
-  const [value, setValue] = React.useState(30);
+function App() {
+  const [showMessage, setShowMessage] = useState(false);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleClick = () => {
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 3000); // 3000 milliseconds = 3 seconds
   };
 
   return (
-    <Box sx={{ width: 200 }}>
-      <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-        
-        <Slider aria-label="Volume" value={value} onChange={handleChange} 
-        
-        />
-        
-      </Stack>
-      <Slider disabled defaultValue={30} aria-label="Disabled slider" />
+    <div>
+      <button onClick={handleClick}>Show Message</button>
+      {showMessage && (
+        <div>
+          <h1>Delayed message after 3 seconds</h1>
+        </div>
+      )}
 
-
-      <Slider
-        size="small"
-        defaultValue={70}
-        aria-label="Small"
-        valueLabelDisplay="auto"
-      />
-      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
-    
-    </Box>
-  
-
-
-
-);
+<Button
+  onClick={() => {
+    alert('clicked');
+  }}
+>
+  Click me
+</Button>
+    </div>
+  );
 }
+
+export default App;
