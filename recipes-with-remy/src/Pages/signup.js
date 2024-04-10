@@ -42,7 +42,7 @@ const Signup = (props) => {
             </div>
             <div className="signinButton">
                 <Button variant='success' className={"CustomGreen"} size='small'>
-                    Sign In 
+                    Sign Up 
                 </Button>
             </div>
             <div className={'signInTxt'}>
