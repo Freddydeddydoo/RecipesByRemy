@@ -1,0 +1,85 @@
+/* In your efridge.css file */
+
+.FullEFridge {
+    display: flex;
+    flex-direction: row; /* Lays out the children in a row */
+    height: 100vh;
+}
+  
+.LeftSide {
+    display: flex;
+    flex: 35; /* Takes up 1 part of the space */
+    flex-direction: column;
+}
+
+.SearchBox, .RecentlyViewed {
+    background-color: rgba(0, 0, 0, 0.25); /* Black background with 25% opacity */
+    border: 2px solid black; /* Solid border */
+    padding: 1px;
+}
+
+.SearchBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex:35;
+    border-radius: 5%;
+    border-style: solid;
+    border-color: black;
+    height: 35vh;
+}
+
+.FilteredResults{
+    color: 'black';
+    background-color: 'white';
+    width: 60%;
+    border-color: black;
+}
+
+.CustomGreene{
+    border-color: black;
+    color: black;
+    width: 50%;
+}
+
+.RecentlyViewed{
+    flex: 65;
+    height: 65vh;
+    border-radius: 5%;
+    border-style: solid;
+    border-color: black;
+    height: 35vh;
+}
+
+  
+.TheFridge {
+    flex: 65; /* Takes up 3 parts of the space, making this div three times larger than the LeftSide */
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+
+.Top {
+    flex: 35;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 2%;
+    border-style: solid;
+    border-color: black;
+}
+  
+.Bottom {
+    flex: 65;
+    height: 65vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px; /* Adjust the gap size as necessary */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 2%;
+    border-style: solid;
+    border-color: black;
+}
+

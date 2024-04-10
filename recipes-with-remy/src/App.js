@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import logo from './logo.svg';
 import './CSSFiles/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Pages/home'
 import Login from './Pages/login'
-import signup from './Pages/signup'
 import Profile from './Pages/profile'
 import View from './Pages/view'
+import Signup from './Pages/signup'
+import Efridge from './Pages/efridge';
 import {useState, useEffect} from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,8 +21,9 @@ function App() {
         <Routes>
           <Route path="/" element={<View email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<signup/>} />
           <Route path="/profile" element={<Profile/>}/>
+          <Route path="/Signup" element={<Signup/>} />
+          <Route path="/efridge" element={<Efridge/>}/>
         </Routes>
       </BrowserRouter>
     </div>
