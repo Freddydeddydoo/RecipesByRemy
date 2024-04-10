@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'; // Removed duplicate import of useEffect
 
 import './../CSSFiles/View.css';
-// import { Button } from '@mui/base/Button';
-// import { Slider } from '@mui/base/Slider';
+import Header from './../Components/header';
+
 import Slider from '@mui/material/Slider';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -72,8 +72,9 @@ const View = (props) => {
 
     return (
         <div className='container'>
+            <Header />
 
-            <Button onClick={onButtonClickBack} variant='contained'>Back</Button>
+            <Button onClick={onButtonClickBack} variant='contained'>Back to Search</Button>
 
             <div className='box'>
                 <h1 className='text'>One Pot Italian Tomato Chicken and Rice</h1>

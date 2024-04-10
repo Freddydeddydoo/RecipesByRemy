@@ -2,9 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'; // Removed duplicate import of useEffect
 
+import Header from './../Components/header';
 import './../CSSFiles/Profile.css';
-// from: https://github.com/markusenglund/react-switch?tab=readme-ov-file
+
 import Switch from "react-switch";
+// from: https://github.com/markusenglund/react-switch?tab=readme-ov-file
 import { Button } from '@mui/base/Button';
 
 
@@ -32,6 +34,7 @@ const Profile = (props) => {
 
     return (
         <div className='container'>
+            <Header />
             <div className='box'>
                 <h2 className="text">Units</h2>
 

@@ -7,7 +7,7 @@
   height: 100vh;
   /* Set container height to full viewport height */
   flex-direction: column;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .box {
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .unit_text {
