@@ -11,6 +11,7 @@ import Search from './Pages/search'
 import {useState, useEffect} from 'react'
 import Test from './Pages/test'
 import Test2 from './Pages/test2'
+import View from './Pages/view'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/search" element={<Search/>} />
           <Route path="/test" element={<Test/>} />
           <Route path="/test2" element={<Test2/>} />
+          <Route path="/view" element={<View/>} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,8 +1,7 @@
 .fullPage{
     width: 100vw;
     height: 100vh;
-    border: 10px solid #333; /* Add a solid border */
-    padding: 5px; /* Add padding to create space inside the border */
+
 
 }
 
@@ -34,18 +33,21 @@
     width: 33%;
     height: 100%;
     margin-top: 10%;
-    margin-right: 2%;
-    border: 3px solid black;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .filterCell{
-    padding: 5px;
+    margin-block: 1%;
     width: 90%;
-    border: 3px solid black;
-    fliex-direction: column;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
     
 
 }
@@ -54,7 +56,7 @@
     width: 64%;
     height: 100%;
     margin-top: 10%;
-    border: 3px solid black;
+    border-left: 3px solid black;
     display: flex;
     flex-direction: column;
 
@@ -62,7 +64,6 @@
 
 .searchSort{
     padding: 5px;
-    border: 3px solid black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -83,16 +84,36 @@
 }
 
 .result{
-    margin-top: 5%;
+    
     padding: 5px;
     
     border: 3px solid black;
     height: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
+
 }
 
 .resultCard{
+    width: 95%;
+    padding: 10px;
+    margin-left: 2%;
+    margin-block: 1%;
+    border: 3px solid black;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+
+    border-radius: 10px;
+
+    justify-content: center;
+
+}
+
+.FullresultCard{
     width: 95%;
     padding: 5px;
     margin-left: 2%;
@@ -137,7 +158,6 @@
 }
 
 .fax{
-    background-color: antiquewhite;
     display: flex;
     flex-direction: row;
     height: 25%;
@@ -145,18 +165,22 @@
 }
 
 .faxCell{
+    background-color: antiquewhite;
+
     width: 32%;
     border: 3px solid black;
     align-items: center;
+    justify-content: center;
     display: flex;
+    border-radius: 10px;
 }
 
 .buttons{
-    margin-inline: 5%;
+    margin-inline: 3%;
     display: flex;
     flex-direction: row;
-    margin-top: 5%;
-    height: 30%;
+    margin-top: 3%;
+    height: 50%;
     justify-content: center;
 
 }
@@ -165,14 +189,14 @@
     flex-direction: row;
     align-items: stretch;
     padding-top: 10px;
-    width: 100%;
+    width: 105%;
     justify-content: center;
 
 }
 
 .searchNclicker{
     padding: 3px;
-    width: 49%;
+    width: 48%;
 
     
 
@@ -188,7 +212,7 @@
 .checkBox{
     padding: 10px;
     background-color: antiquewhite;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     margin-inline:  5%;
     margin-block: 1%;

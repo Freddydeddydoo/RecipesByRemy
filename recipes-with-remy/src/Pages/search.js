@@ -135,79 +135,75 @@ const Search = (props) => {
 
             <div className='pageContent'>
                 <div className='filterSide'>
-                    Filterside
+                    <h1>Filters</h1>
+
                     <div className='filterCell'>
-                        <Button variant='contained'
-                        onClick={
-                        addComponent
-                        }
-                        > Click to make more buttons</Button>
-                        
-                        {components.map(component => component)}
-                        
+                        Based On Ingredients
+                        <div className='excludeInclude'>
+                            
+                            <div className='searchNclicker'>
+                                <Autocomplete
+                                    
+                                    sx={{ 
+                                        borderRadius: 1,
+                                        border: 1,
+                                        width: 1,
+                                        bgcolor: "antiquewhite",
 
+                                    }}
+                                    onChange={HandleCheck}
+                                    multiple
+                                    id="tags-standard"
+                                    options={TenIngredients}
+                                    getOptionLabel={(option) => option.label}
+                                    renderInput={(params) => (
+                                    <TextField
 
+                                        margin='dense'
+                                        {...params}
+                                        variant="standard"
+                                        label="Include Ingredients:"
+                                        placeholder="Start typing an ingredient"
+                                    />
+                                    )}
+                                />
+                            </div>
+
+                            <div className='searchNclicker'>
+                                <Autocomplete
+                                    
+                                    sx={{ 
+                                        borderRadius: 1,
+                                        border: 1,
+                                        width: 1,
+                                        bgcolor: "antiquewhite"
+
+                                    }}
+                                    onChange={HandleCheck1}
+                                    multiple
+                                    id="tags-standard"
+                                    options={TenIngredients}
+                                    getOptionLabel={(option) => option.label}
+
+                                    renderInput={(params) => (
+                                    <TextField
+                                        margin='dense'
+                                        {...params}
+                                        variant="standard"
+                                        label="Exclude Ingredients:"
+                                        placeholder="Start typing an ingredient"
+                                    />
+                                    )}
+                                />
+                            </div>
+
+                        </div>
                     </div>
 
+                <div className='filterCell'>                   
+                    Based On Time To Make
                     <div className='excludeInclude'>
-                        <div className='searchNclicker'>
-                            <Autocomplete
-                                
-                                sx={{ 
-                                    borderRadius: 1,
-                                    border: 1,
-                                    width: 1,
-                                    bgcolor: "antiquewhite"
-
-                                }}
-                                onChange={HandleCheck}
-                                multiple
-                                id="tags-standard"
-                                options={TenIngredients}
-                                getOptionLabel={(option) => option.label}
-                                renderInput={(params) => (
-                                <TextField
-                                    margin='dense'
-                                    {...params}
-                                    variant="standard"
-                                    label="Include Ingredients:"
-                                    placeholder="Start typing an ingredient"
-                                />
-                                )}
-                            />
-                        </div>
-
-                        <div className='searchNclicker'>
-                            <Autocomplete
-                                
-                                sx={{ 
-                                    borderRadius: 1,
-                                    border: 1,
-                                    width: 1,
-                                    bgcolor: "antiquewhite"
-
-                                }}
-                                onChange={HandleCheck1}
-                                multiple
-                                id="tags-standard"
-                                options={TenIngredients}
-                                getOptionLabel={(option) => option.label}
-
-                                renderInput={(params) => (
-                                <TextField
-                                    margin='dense'
-                                    {...params}
-                                    variant="standard"
-                                    label="Exclude Ingredients:"
-                                    placeholder="Start typing an ingredient"
-                                />
-                                )}
-                            />
-                        </div>
-
-                    </div>
                     
-                    <div className='excludeInclude'>
                         <div className='textBox'>
                         <TextField
                             sx={{ 
@@ -242,7 +238,11 @@ const Search = (props) => {
                         />
                         </div>
                     </div>
+                </div>
 
+                <div className='filterCell'>                   
+    
+                    Based On Cusine
                     <div className='searchNclicker'>
                     <Autocomplete
                                 
@@ -261,7 +261,7 @@ const Search = (props) => {
 
                                 renderInput={(params) => (
                                 <TextField
-                                    margin='normal'
+                                    margin='dense'
                                     {...params}
                                     variant="standard"
                                     label="Cusine Type"
@@ -270,7 +270,11 @@ const Search = (props) => {
                                 )}
                             />
                     </div>
+                </div>
 
+                <div className='filterCell'>                   
+
+                        Based On Dietary Restrictions
                     <div className='dietRes'>
                         <div className='checkBox'>
                             <FormControlLabel    
@@ -330,11 +334,11 @@ const Search = (props) => {
                         </div>
                     </div>
 
-                    
+                </div>   
                 </div>
                     
                 <div className='resultSide'>
-                    resultSide
+                    <h1> Results</h1>
                     <div className='searchSort'>
                         <div className='keywordSearch'>
                         <TextField

@@ -1,0 +1,82 @@
+.container {
+    
+    width: 100vw;
+    height: 100vh;
+    border: 10px solid #333; /* Add a solid border */
+    padding: 5px; /* Add padding to create space inside the border */
+    
+}
+
+.box {
+    width: 80vw;
+    height:fit-content;
+    /* Adjust width as needed */
+    padding: 10px;
+    /* Add padding to create space between content and border */
+    background-color: rgb(164, 205, 167);
+    /* Set background color to light green */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 3px solid black;
+
+}
+
+.column {
+    display: flex;
+}
+
+.box_small {
+    width: 40vw;
+    /* Adjust width as needed */
+    padding: 10px;
+    /* Add padding to create space between content and border */
+    background-color: rgb(164, 205, 167);
+    /* Set background color to light green */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
+.unit_text {
+    margin: -10px 20px 0;
+    /* Adjust the margin-top value to move the text up */
+    position: relative;
+    top: -5px;
+    /* Adjust the value to move the text up or down */
+    font-size: 22px;
+}
+
+.text {
+    margin: 10px 20px;
+    text-align: left;
+}
+
+.notify_box {
+    /* Add padding to create space between content and border */
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    transform: scale(2);
+}
+
+.facts {
+    margin: -10px 20px 0;
+    /* Adjust the margin-top value to move the text up */
+    position: relative;
+    /* Adjust the value to move the text up or down */
+    font-size: 22px;
+
+}
+
+.border{
+    border: 2px solid black;
+    padding: 10%;
+}

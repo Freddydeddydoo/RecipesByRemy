@@ -1,18 +1,40 @@
-import React from 'react';
-import { Select, MenuItem } from '@mui/material';
-import InputLabel from '@mui/material/InputLabel';
-function MySelect() {
-  return (
-    <div>
-    <InputLabel id="demo-simple-select-label">Sort By</InputLabel>
-    <Select defaultValue="Most Ingredients Matched">
-      <MenuItem value="Most Ingredients Matched">Most Ingredients Matched</MenuItem>
-      <MenuItem value="option1">Option 1</MenuItem>
-      <MenuItem value="option2">Option 2</MenuItem>
-      {/* Add more menu items if needed */}
-    </Select>
-    </div>
-  );
-}
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Slider from '@mui/material/Slider';
 
-export default MySelect;
+
+export default function ContinuousSlider() {
+  const [value, setValue] = React.useState(30);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box sx={{ width: 200 }}>
+      <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+        
+        <Slider aria-label="Volume" value={value} onChange={handleChange} 
+        
+        />
+        
+      </Stack>
+      <Slider disabled defaultValue={30} aria-label="Disabled slider" />
+
+
+      <Slider
+        size="small"
+        defaultValue={70}
+        aria-label="Small"
+        valueLabelDisplay="auto"
+      />
+      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+    
+    </Box>
+  
+
+
+
+);
+}

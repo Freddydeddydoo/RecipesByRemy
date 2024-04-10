@@ -140,7 +140,18 @@ const ParentComponent = () => {
 
     </div>
 
+    <div className='filterCell'>
+                        <Button variant='contained'
+                        onClick={
+                        addComponent
+                        }
+                        > Click to make more buttons</Button>
+                        
+                        {components.map(component => component)}
+                        
 
+
+                    </div>
     </div>
   );
 };

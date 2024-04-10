@@ -5,8 +5,7 @@
 .fullPage{
     width: 100vw;
     height: 100vh;
-    border: 10px solid #333; /* Add a solid border */
-    padding: 5px; /* Add padding to create space inside the border */
+    
 
 }
 
@@ -30,7 +29,7 @@
         display: flex;
         width: 100%;
         top: 140px;
-        background-color: #1a8d67;
+
         position: relative;
         flex-direction: column;
 
@@ -42,20 +41,20 @@
 }
 
 .SearchBar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     
-    justify-content: left;
-    background-color: whitesmoke;
-    padding: 10px;
-    border: 3px solid #272323;
-    width: 10%;
+
+    width: 25%;
     margin-right: 30%;
-    margin-left: 5%;
+    margin-left: 1%;
 
 }
 
 .sortButton{
     
-    justify-content: right;
+    justify-content: end;
     background-color: whitesmoke;
     margin-left: 40%;
     margin-right: 5%;
@@ -66,68 +65,92 @@
 
 .filters{
     display: flex;
+    justify-content: left;
+
 }
 
 .results{
-    margin-top: 10%;
+    margin-top: 8%;
     padding: 5px;
     border: 3px solid black;
-}
-
-.resultCell{
-    padding: 5px;
-    border: 3px solid green;
+    border-radius: 10px 20px 10px 15px;
     display: flex;
-}
-.resultImage{
-    padding: 5px;
-
-    margin-left: 10%;
-    height: 200px;
-    width: 450px;
-    background-color: yellow;
+    justify-content: center;
 }
 
-.resultsKeyFax{
-
+.FullresultCardSaved{
+    width: 98%;
     padding: 5px;
-    background-color: white;
-
-    margin-left: 10%;
-    height: 100px;
-    width: 600px;
-
-}
-
-.resultsButtons{
-    margin-left: 20%;
-    padding: 5px;
-    width: 300px;
+    
+    margin-block: 1%;
+    border: 3px solid black;
+    height: 20%;
     display: flex;
+    flex-direction: row;
+    border-radius: 10px 20px 10px 15px;
+
+
+    flex-wrap: nowrap;
+
+
+    justify-content: center;
+
 }
 
-.resultsB_view{
-    padding: 5px;
-    margin-right: 10%;
-    height: 45px;
-    width: 45px;
-    background-color: green;
+.imageSaved{
+    margin-inline: 5%;
+    border: 3px solid black !important;
+    flex: 1;
+
+
+
 }
 
-.resultsB_edit{
-    margin-right: 10%;
-    padding: 5px;
-    height: 45px;
-    width: 45px;
-    background-color: brown;
+.titleFaxSaved{
+    margin-inline: 5%;
+
+    display: flex;
+    flex-direction: column;
+
+
 }
 
-.resultsB_delete{
-    margin-right: 10%;
-    padding: 5px;
-    height: 45px;
-    width: 45px;
-    background-color: red;
+.titleSaved{
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+
+}
+
+.faxSaved{
+    display: flex;
+    flex-direction: row;
+    height: 25%;
+    width: 100%;
+    align-items: stretch;
+    border-radius: 10px 20px 10px 15px;
+
+}
+
+.faxCellSaved{
+    background-color: antiquewhite;
+
+    width: 32%;
+    border: 3px solid black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+
+}
+
+.buttonsSaved{
+    margin-inline: 5%;
+    display: flex;
+    flex-direction: row;
+    margin-block: 3%;
+    justify-content: center;
 
 }
 
