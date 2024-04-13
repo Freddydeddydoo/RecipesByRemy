@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import logo from './logo.svg';
 import './CSSFiles/App.css';
 import './CSSFiles/Saved.css';
@@ -23,7 +23,7 @@ function App() {
   const [email, setEmail] = useState('')
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
           <Route path="/login" element={<Login/>} />
@@ -40,7 +40,7 @@ function App() {
           <Route path="/view" element={<View />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
