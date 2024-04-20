@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/RecipesByRemy/static/css/main.172d543b.css",
-    "main.js": "/RecipesByRemy/static/js/main.006d7eee.js",
+    "main.js": "/RecipesByRemy/static/js/main.c4b58b2a.js",
     "static/js/453.8bfbf777.chunk.js": "/RecipesByRemy/static/js/453.8bfbf777.chunk.js",
     "static/media/BackgroundIMG.png": "/RecipesByRemy/static/media/BackgroundIMG.610f63453cd19025f01c.png",
     "static/media/Italian-Chicken-and-Rice-2.jpg": "/RecipesByRemy/static/media/Italian-Chicken-and-Rice-2.4bb1c3ca69088aad425f.jpg",
     "static/media/logo.svg": "/RecipesByRemy/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/RecipesByRemy/index.html",
     "main.172d543b.css.map": "/RecipesByRemy/static/css/main.172d543b.css.map",
-    "main.006d7eee.js.map": "/RecipesByRemy/static/js/main.006d7eee.js.map",
+    "main.c4b58b2a.js.map": "/RecipesByRemy/static/js/main.c4b58b2a.js.map",
     "453.8bfbf777.chunk.js.map": "/RecipesByRemy/static/js/453.8bfbf777.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.172d543b.css",
-    "static/js/main.006d7eee.js"
+    "static/js/main.c4b58b2a.js"
   ]
 }
